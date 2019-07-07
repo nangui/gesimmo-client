@@ -2,37 +2,32 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 import './index.css';
-import App from './App';
+import Navbar from './components/Navbar'
+import Dashboard from './components/Dashboard';
+
 import * as serviceWorker from './serviceWorker';
 
-const Home = () => {
-  return <h1>THIS IS THE HOME PAGE</h1>
+const Bien = () => {
+  return <h1>Vous êtes sur la page des biens</h1>
 };
 
-const About = () => {
-  return <h1>THIS IS THE ABOUT PAGE</h1>
+const Bailleur = () => {
+  return <h1>Vous êtes sur la page des Bailleurs</h1>
 };
 
 ReactDOM.render(
   <Router>
-    <ul>
-      <li>
-        <Link to="/">Root Page</Link>
-      </li>
-      <li>
-        <Link to="/home">Home Page</Link>
-      </li>
-      <li>
-        <Link to="/about">About Page</Link>
-      </li>
-    </ul>
-    <Route exact={true} path="/" component={ App } />
-    <Route path="/home" component={Home} />
-    <Route path="/about" component={About} />
+    <div className="wrapper">
+      <Navbar />
+      <div>
+        <Route exact={true} path="/" component={Dashboard} />
+        <Route path="/biens" component={Bien} />
+        <Route path="/bailleurs" component={Bailleur} />
+      </div>
+    </div>
   </Router>
   , document.getElementById('root'));
 
