@@ -4,8 +4,13 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
+
+// Import your main (page components like Login, Register, ...) component here
+import Header from './components/Header'
 import Navbar from './components/Navbar'
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/Dashboard'
+import Bailleur from './components/Bailleur'
+import Bien from './components/Bien'
 
 // css and scss files
 import 'bootstrap/dist/css/bootstrap.css'; // Put all of your css or scss files below this line
@@ -13,17 +18,10 @@ import 'bootstrap/dist/css/bootstrap.css'; // Put all of your css or scss files 
 // Service worker file it is very help full if you would to build an spa with offline capability 
 import * as serviceWorker from './serviceWorker';
 
-const Bien = () => {
-  return <h1>Vous êtes sur la page des biens</h1>
-};
-
-const Bailleur = () => {
-  return <h1>Vous êtes sur la page des Bailleurs</h1>
-};
-
 ReactDOM.render(
   <Router>
-    <div className="wrapper">
+    <div className="main-wrapper">
+      <Header />
       <Navbar />
       <div>
         <Route exact={true} path="/" component={Dashboard} />
