@@ -4,10 +4,13 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
-import './index.css';
 import Navbar from './components/Navbar'
 import Dashboard from './components/Dashboard';
 
+// css and scss files
+import 'bootstrap/dist/css/bootstrap.css'; // Put all of your css or scss files below this line
+
+// Service worker file it is very help full if you would to build an spa with offline capability 
 import * as serviceWorker from './serviceWorker';
 
 const Bien = () => {
