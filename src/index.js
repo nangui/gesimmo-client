@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
   Route,
-
+  Link
 } from 'react-router-dom';
 import './index.css';
 import App from './App';
@@ -19,6 +19,17 @@ const About = () => {
 
 ReactDOM.render(
   <Router>
+    <ul>
+      <li>
+        <Link to="/">Root Page</Link>
+      </li>
+      <li>
+        <Link to="/home">Home Page</Link>
+      </li>
+      <li>
+        <Link to="/about">About Page</Link>
+      </li>
+    </ul>
     <Route exact={true} path="/" component={ App } />
     <Route path="/home" component={Home} />
     <Route path="/about" component={About} />
