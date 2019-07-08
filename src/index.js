@@ -14,6 +14,7 @@ import Bien from './components/Bien'
 
 // css and scss files
 import 'bootstrap/dist/css/bootstrap.css'; // Put all of your css or scss files below this line
+import './custom.scss'
 
 // Service worker file it is very help full if you would to build an spa with offline capability 
 import * as serviceWorker from './serviceWorker';
