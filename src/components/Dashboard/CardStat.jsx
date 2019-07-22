@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const CardStat = (props) => {
   return (
@@ -9,6 +10,9 @@ const CardStat = (props) => {
           <div className="widget-detail">
             <h2 className="p-t-10 mb-0">{ props.number }</h2>
           </div>
+        </div>
+        <div className="text-right">
+          <Link to={props.link}>Voir détails</Link>
         </div>
       </div>
     </div>

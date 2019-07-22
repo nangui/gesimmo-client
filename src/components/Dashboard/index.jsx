@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import './index.scss'
 import CardStat from './CardStat';
 class Dashboard extends Component {
@@ -38,12 +37,23 @@ class Dashboard extends Component {
     .catch(err => console.log(err))
   }
 
+  extractLink = (words) => {
+    var n = words.split(" ");
+    return n[n.length - 1].toLowerCase();
+  }
+
   render() {
     return (
       <div className="container-fluid" id="dashboard-wrapper">
         <div className="row">
           {
-            Object.keys(this.state.stats).map(key => <CardStat key={key} title={key} number={this.state.stats[key]} />)
+            Object.keys(this.state.stats).map(
+              key => <CardStat 
+                key={key} 
+                title={key} 
+                number={this.state.stats[key]} 
+                link={this.extractLink(key)} />
+            )
           }
         </div>
       </div>

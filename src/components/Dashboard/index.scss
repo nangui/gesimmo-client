@@ -5,6 +5,10 @@
     border-radius: 5px;
     margin-bottom: 20px;
     background-color: #ffffff;
+
+    &:hover {
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
   }
 
   .header-title {
@@ -13,6 +17,7 @@
     line-height: 16px;
     margin-bottom: 8px;
     margin-top: 0;
+    padding-top: 16px;
   }
 
   .widget-detail {
