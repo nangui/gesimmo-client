@@ -4,13 +4,14 @@
   z-index: 1041;
   background-color: #fff;
   bottom: 0;
-  margin-top: 0px;
+  margin-top: 0;
   position: fixed;
   left: 0;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  border-right: 1px solid #e7e7e7;
+  z-index: 10;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
 
   .sidebar-inner {
     height: 100%;
@@ -36,6 +37,7 @@
 
           &:hover {
             color: #00bf6f;
+            text-decoration: unset;
           }
 
           & > .badge {

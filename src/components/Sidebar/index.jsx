@@ -11,17 +11,22 @@ const Sidebar = () => {
             <li className="menu-title">Main</li>
             <li className="active">
               <Link to="/">
-              <i className="fas fa-tachometer-alt"></i> Dashboard
+                <i className="fas fa-tachometer-alt"></i> Dashboard
               </Link>
             </li>
             <li className="">
               <Link to="/bailleurs">
-              <i className="fas fa-users"></i> Bailleurs
+                <i className="fas fa-users"></i> Bailleurs
               </Link>
             </li>
             <li className="">
               <Link to="/biens">
-              <i className="fas fa-funnel-dollar"></i> Biens
+                <i className="fas fa-funnel-dollar"></i> Biens
+              </Link>
+            </li>
+            <li className="">
+              <Link to="/clients">
+                <i className="fas fa-users"></i> Clients
               </Link>
             </li>
           </ul>

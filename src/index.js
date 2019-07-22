@@ -11,6 +11,7 @@ import Sidebar from './components/Sidebar'
 import Dashboard from './components/Dashboard'
 import Bailleur from './components/Bailleur'
 import Bien from './components/Bien'
+import Client from './components/Client'
 
 // css and scss files
 import 'bootstrap/dist/css/bootstrap.css'; // Put all of your css or scss files below this line
@@ -25,10 +26,14 @@ ReactDOM.render(
       <Header />
       <Sidebar />
       <div className="page-wrapper">
-        <div className="content container-fluid">
+        <div className="content">
           <Route exact={true} path="/" component={Dashboard} />
           <Route path="/biens" component={Bien} />
           <Route path="/bailleurs" component={Bailleur} />
+          <Route path="/clients" component={Client} />
+        </div>
+        <div className="footer text-right">
+          Prenom Nom @ 2019
         </div>
       </div>
     </div>
