@@ -26,4 +26,18 @@ body {
       left: 250px;
     }
   }
+
+  .card-box {
+    padding: 20px;
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+  }
+
+  thead,
+  tr,
+  tr th {
+    border-top: none !important;
+  }
 }
